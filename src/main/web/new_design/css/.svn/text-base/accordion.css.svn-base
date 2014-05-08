@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+
+.horizontalAccordion {
+	height: 320px;
+}
+.horizontalAccordion .div_head{
+	margin:0;
+	position: absolute;
+	width:300px;
+	-webkit-backface-visibility: hidden;
+    -webkit-transform: translateX(-100%) rotate(-90deg); 
+    -webkit-transform-origin: right top; 
+    -moz-transform: translateX(-100%) rotate(-90deg);
+    -moz-transform-origin: right top; 
+    -o-transform: translateX(-100%) rotate(-90deg); 
+    -o-transform-origin: right top; 
+    transform: translateX(-100%) rotate(-90deg); 
+    transform-origin: right top;
+    text-align: center;
+    z-index: 1;
+}
+.horizontalAccordion > ol {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.horizontalAccordion .slide > h2 {
+	width:300px;
+	padding: 10px;
+	border-top: 1px solid #0066a8;
+    margin: 0;
+    z-index: 100;
+    position: absolute; 
+    top: 0;
+    left: 0px;
+    background: #FFF;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateX(-100%) rotate(-90deg); 
+    -webkit-transform-origin: right top; 
+    -moz-transform: translateX(-100%) rotate(-90deg);
+    -moz-transform-origin: right top; 
+    -o-transform: translateX(-100%) rotate(-90deg); 
+    -o-transform-origin: right top; 
+    transform: translateX(-100%) rotate(-90deg); 
+    transform-origin: right top; 
+}
+.horizontalAccordion .slide > h2:hover {
+	cursor: pointer;
+	color: #FFF;
+	background: #0066a8;
+}
+.horizontalAccordion .slide > div {
+	background: #FFF;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	overflow: hidden;
+}
+.horizontalAccordion .slide > h2.selected_accord {
+	border-bottom: 1px solid #0066a8;
+}

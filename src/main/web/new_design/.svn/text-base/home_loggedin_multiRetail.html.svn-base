@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Name yet to be thought of</title>
+	 
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/accordion.css" rel="stylesheet" type="text/css" />
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	<link href="css/starify.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- Header -->
+<header>
+	<div id="header">
+		<div id="logo">
+			<img src="img/logo.png" alt="PriceRite" />
+		</div>
+		<div id="search">
+			<form method="get" action="search.html">
+				<div style="font-weight: 800; color: #FFF; height: 30px; display: inline-block; cursor: pointer;">
+					<div id="select_cat">
+						<span id="selected_cat">All</span>
+						<div class="drop" style="margin: 8px 0px 0px -10px; z-index: 2;">
+							<select name="search_cat" id="search_cat" size="10" style="display: none;">
+								<option value="All" selected="selected">All Categories</option>
+								<option value="cat1" >Category 1</option>
+								<option value="cat2" >Category 2</option>
+								<option value="cat3" >Category 3</option>
+								<option value="cat4" >Category 4</option>
+								<option value="cat5" >Category 5</option>
+								<option value="cat6" >Category 6</option>
+								<option value="cat7" >Category 7</option>
+								<option value="cat8" >Category 8</option>
+								<option value="cat9" >Category 9</option>
+								<option value="cat10" >Category 10</option>
+								<option value="cat11" >Category 11</option>
+								<option value="cat12" >Category 12</option>
+								<option value="cat13" >Category 13</option>
+								<option value="cat14" >Category 14</option>
+							</select>
+						</div>
+						<div style="display: inline-block; height:7px; width: 9px; background: url('img/spry_1.png') -4px -4px no-repeat;"></div>
+					</div>
+				</div>
+				<input id="searchBar" type="text" placeholder="Search" style="padding-left: 10px; height: 27px; outline: 0px; border: none; display: inline-block; width: 751px;">
+				<div style="font-weight: 800; color: #FFF; height: 30px; display: inline-block; cursor: pointer;">
+					<input type="submit" value="GO" style="background: -webkit-linear-gradient(top, #65a3ca 10%, #0066a8 100%);background: -moz-linear-gradient(top, #65a3ca 10%, #0066a8 100%); outline: none; border: none; color: #FFF; font-weight: 800; height: 30px; border-radius: 0px 3px 3px 0px; margin: 0px; font-size: 14px;">
+				</div>
+			</form>
+		</div>
+		<div id="account">
+			<div id="account_button">
+				Chirag <div id="down"></div>
+			</div>
+			<div class="drop">
+				<form method="post" action="home_login.html">
+				</form>
+			</div>
+		</div>
+	</div>
+<!-- Nav+retailer Header -->
+	<div id="nav">
+		<div id="navigation">
+			<div id="nav_button">
+				Shop by<br /><span class="bolder">Department</span>
+				<div class="down_big"></div>
+			</div>
+			<div id="categories" class="dropdown">
+				<div class="main_menu" id="cat_main_menu">
+					<ul>
+						<li data-catid="cat_1">Category 1<div class="rightArrow"></div></li>
+						<li data-catid="cat_2">Category 2<div class="rightArrow"></div></li>
+						<li data-catid="cat_3">Category 3<div class="rightArrow"></div></li>
+						<li data-catid="cat_4">Category 4<div class="rightArrow"></div></li>
+						<li data-catid="cat_5">Category 5<div class="rightArrow"></div></li>
+						<li data-catid="cat_6">Category 6<div class="rightArrow"></div></li>
+						<li data-catid="cat_7">Category 7<div class="rightArrow"></div></li>
+						<li data-catid="cat_8">Category 8<div class="rightArrow"></div></li>
+						<li data-catid="cat_9">Category 9<div class="rightArrow"></div></li>
+						<li data-catid="cat_10">Category 10<div class="rightArrow"></div></li>
+						<li data-catid="cat_11">Category 11<div class="rightArrow"></div></li>
+						<li data-catid="cat_12">Category 12<div class="rightArrow"></div></li>
+						<li data-catid="cat_13">Category 13<div class="rightArrow"></div></li>
+					</ul>
+					<div style="border-top: 1px solid #0066a8; margin: 10px 5px 0px; font-weight: normal; padding: 10px;">
+						<a href="all_cat.html">> Full Category Directory</a>
+					</div>
+				</div>
+				<div class="sub_menu" id="cat_main_menu" style="position: relative;">
+					<div class="menu_divider" style="position: absolute; height: 100%; left: 0px; top: 0px; border-left: 1px solid #DEDEDE; border-right: 2px solid #F7F7F7;"></div>
+					<div id="cat_1" class="sub_menu_data">
+						Category 1 data<br />
+						Category 1 data<br />
+						Category 1 data<br />
+						Category 1 data<br />
+						Category 1 data<br />
+						Category 1 data<br />
+						Category 1 data<br />
+					</div>
+					<div id="cat_2" class="sub_menu_data">
+						Category 2 data
+					</div>
+					<div id="cat_3" class="sub_menu_data">
+						Category 3 data
+					</div>
+					<div id="cat_4" class="sub_menu_data">
+						Category 4 data
+					</div>
+					<div id="cat_5" class="sub_menu_data">
+						Category 5 data
+					</div>
+					<div id="cat_6" class="sub_menu_data">
+						Category 6 data
+					</div>
+					<div id="cat_7" class="sub_menu_data">
+						Category 7 data
+					</div>
+					<div id="cat_8" class="sub_menu_data">
+						Category 8 data
+					</div>
+					<div id="cat_9" class="sub_menu_data">
+						Category 9 data
+					</div>
+					<div id="cat_10" class="sub_menu_data">
+						Category 10 data
+					</div>
+					<div id="cat_11" class="sub_menu_data">
+						Category 11 data
+					</div>
+					<div id="cat_12" class="sub_menu_data">
+						Category 12 data
+					</div>
+					<div id="cat_13" class="sub_menu_data">
+						Category 13 data
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right" style="margin-right: 20px;" id="retail_select">
+			<div id="retail_all">
+				Select all<br /><span class="bolder">Retailers</span>
+			</div>
+			<div id="retailers">
+				<div id="retail_prev_button"></div>
+				<div id="retailer_logos">
+					<ul>
+						<li data-select="amazon"><img src="img/logos/amazon.png" height="39" width="50" /></li>
+						<li data-select="babiesrus"><img src="img/logos/babiesrus.png" height="39" width="50" /></li>
+						<li data-select="bananarepublic"><img src="img/logos/bananarepublic.png" height="39" width="50" /></li>
+						<li data-select="bestbuy"><img src="img/logos/bestbuy.png" height="39" width="50" /></li>
+						<li data-select="bjs"><img src="img/logos/bjs.png" height="39" width="50" /></li>
+						<li data-select="costco"><img src="img/logos/costco.png" height="39" width="50" /></li>
+						<li data-select="cvscaremark"><img src="img/logos/cvscaremark.png" height="39" width="50" /></li>
+						<li data-select="gap"><img src="img/logos/gap.png" height="39" width="50" /></li>
+						<li data-select="homedepot"><img src="img/logos/homedepot.png" height="39" width="50" /></li>
+						<li data-select="jcp"><img src="img/logos/jcp.png" height="39" width="50" /></li>
+						<li data-select="kohls"><img src="img/logos/kohls.png" height="39" width="50" /></li>
+						<li data-select="lowes"><img src="img/logos/lowes.png" height="39" width="50" /></li>
+						<li data-select="macys"><img src="img/logos/macys.png" height="39" width="50" /></li>
+						<li data-select="nordstrom"><img src="img/logos/nordstrom.png" height="39" width="50" /></li>
+						<li data-select="oldnavy"><img src="img/logos/oldnavy.png" height="39" width="50" /></li>
+						<li data-select="riteaid"><img src="img/logos/riteaid.png" height="39" width="50" /></li>
+						<li data-select="samsclub"><img src="img/logos/samsclub.png" height="39" width="50" /></li>
+						<li data-select="sears"><img src="img/logos/sears.png" height="39" width="50" /></li>
+						<li data-select="staples"><img src="img/logos/staples.png" height="39" width="50" /></li>
+						<li data-select="target"><img src="img/logos/target.png" height="39" width="50" /></li>
+						<li data-select="toysrus"><img src="img/logos/toysrus.png" height="39" width="50" /></li>
+						<li data-select="victoriassecret"><img src="img/logos/vs.png" height="39" width="50" /></li>
+						<li data-select="walgreens"><img src="img/logos/walgreens.png" height="39" width="50" /></li>
+						<li data-select="walmart"><img src="img/logos/walmart.png" height="39" width="50" /></li>
+					</ul>
+				</div>
+				<div id="retail_next_button"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+<!-- Nav+retailer Header ends -->
+</header>
+<!-- Header ends -->
+
+<!-- Content -->
+<div id="content" class="mg10">
+	
+	<div id="sidebar">
+		<div id="market">
+			<div class="div_head pad10">
+				Market Index
+			</div>
+			<div>
+				<table id="market_index">
+					<tr>
+						<th>Retailer</th>
+						<th>Today</th>
+						<th>Last</th>
+						<th>Change</th>
+					</tr>
+					<tr>
+						<td>Walmart</td>
+						<td>$10</td>
+						<td>$12</td>
+						<td><span class="market_gain">+20%</span></td>
+					</tr>
+					<tr>
+						<td>lowes</td>
+						<td>$10</td>
+						<td>$8</td>
+						<td><span class="market_loss">-20%</span></td>
+					</tr>
+					<tr>
+						<td>costco</td>
+						<td>$10</td>
+						<td>$12</td>
+						<td><span class="market_gain">+20%</span></td>
+					</tr>
+					<tr>
+						<td>target</td>
+						<td>$10</td>
+						<td>$8</td>
+						<td><span class="market_loss">-20%</span></td>
+					</tr>
+					<tr class="last">
+						<td>kohls</td>
+						<td>$10</td>
+						<td>$12</td>
+						<td><span class="market_gain">+20%</span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- Price Alerts -->
+		<div id="price_alert" class="mg10tb mgdiv" style="height: 240px;">
+			<div class="div_head pad10" style="background: #ed1c24;">
+				Price Alert
+			</div>
+			<div id="priceAlert_slideshow">
+				<div class="slide_selected" style="height: 150px;">
+					<div id="pricealert_1" class="slide" style="display: block;">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 1</span></h1>
+						</div>
+					</div>
+					<div id="pricealert_2" class="slide">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 2</span></h1>
+						</div>
+					</div>
+					<div id="pricealert_3" class="slide">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 3</span></h1>
+						</div>
+					</div>
+					<div id="pricealert_4" class="slide">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 4</span></h1>
+						</div>
+					</div>
+					<div id="pricealert_5" class="slide">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 5</span></h1>
+						</div>
+					</div>
+				</div>
+				<div class="slidePrev" style="margin-left: 5px; float: left; display: inline-block; color: #666667; font-size: 12px; cursor: pointer;height: 15px;">Prev</div>
+				<div id="pricealert_thumb" class="slide_thumbnail" style="height: 25px; padding: 5px; overflow: hidden; display: inline-block; width: 230px; height: 15px;">
+					<ul>
+						<li data-slide="pricealert_1"><div class="pricealert_thumb" ></div></li>
+						<li data-slide="pricealert_2"><div class="pricealert_thumb" ></div></li>
+						<li data-slide="pricealert_3"><div class="pricealert_thumb" ></div></li>
+						<li data-slide="pricealert_4"><div class="pricealert_thumb" ></div></li>
+						<li data-slide="pricealert_5"><div class="pricealert_thumb" ></div></li>
+					</ul>
+				</div>
+				<div class="slideNext" style="margin-right: 5px; float: right; display: inline-block; color: #666667; font-size: 12px;cursor: pointer;height: 15px;">Next</div>
+			</div>
+		</div>
+		<!-- Price Alerts end -->
+	</div>
+	
+	<div id="main_content" style="height: 500px;">
+		<div id="slideshow">
+			<div class="slide_selected" style="height: 420px; border-bottom: 1px solid #666;">
+				<div id="slide_1" class="slide" style="display: block;">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 1</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_2" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 2</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_3" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 3</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_4" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 4</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_5" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 5</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_6" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 6</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_7" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 7</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_8" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 8</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_9" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 9</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>0066a8
+				</div>
+				<div id="slide_10" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 10</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="slide_thumbnail" class="bod" style="height: 70px; overflow: hidden;">
+				<div id="slide_select_arrow" style="width: 10px; height: 9px; background: url('img/spry_1.png') -53px -4px; position: relative; left: 0px; top: 1px; "></div>
+				<ul>
+					<li data-slide="slide_1"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_2"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_3"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_4"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_5"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_6"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_7"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_8"><img src="img/thumb.png" width="140" height="50" /></li> 
+					<li data-slide="slide_9"><img src="img/thumb.png" width="140" height="50"/></li>
+					<li data-slide="slide_10"><img src="img/thumb.png" width="140" height="50"/></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+<!-- Hot Content -->
+	<div id="hot_content" class="mg10 bod horizontalAccordion mgdiv">
+		<div class="div_head pad10">
+			Top Price Drops
+		</div>
+		<ol>
+			<li class="slide">
+				<h2><span>Category1</span></h2>
+				<div>
+					Data will come here.
+				</div>
+			</li>
+			<li class="slide">
+				<h2><span>Category2</span></h2>
+				<div>
+					Data will come here.
+				</div>
+			</li>
+			<li class="slide">
+				<h2><span>Category3</span></h2>
+				<div>
+					Data will come here.
+				</div>
+			</li>
+			<li class="slide">
+				<h2><span>Category4</span></h2>
+				<div>
+					Data will come here.
+				</div>
+			</li>
+			<li class="slide">
+				<h2><span>Category5</span></h2>
+				<div>
+					Data will come here.
+				</div>
+			</li>
+			<li class="slide last">
+				<h2><span>Category6</span></h2>
+				<div>
+					Data will come here.
+				</div>
+			</li>
+		</ol>
+	</div>
+<!-- Hot Content ends -->
+
+<!-- most/recently viewed items -->
+	<div id="viewed_items" class="mg10 mgdiv">
+		<div id="recent_viewed" style="display: inline-block; width: 210px; padding: 10px; border-right: 1px #666667 solid;">
+			<h1 style="color: #666667; font-weight: 900;">Recently Viewed Items</h1>
+			<ul>
+				<li><img src="recent_viewed.png"/></li>
+				<li><img src="recent_viewed.png"/></li>
+				<li><img src="recent_viewed.png" /></li>
+				<li><img src="recent_viewed.png" /></li>
+			</ul>
+		</div>
+		<div id="most_viewed" style="display: inline-block; padding: 10px;">
+			<h1 style="color: #666667; font-weight: 900;">Most Viewed Items</h1>
+			<ul>
+				<li><img src="most_viewed.png" height="228" width="149"  /></li>
+				<li><img src="most_viewed.png" height="228" width="149"  /></li>
+				<li><img src="most_viewed.png" height="228" width="149"  /></li>
+				<li><img src="most_viewed.png" height="228" width="149"  /></li>
+				<li><img src="most_viewed.png" height="228" width="149"  /></li>
+				<li><img src="most_viewed.png" height="228" width="149"  /></li>
+			</ul>
+		</div>
+	</div>
+<!-- most/recently viewed items ends -->
+</div>
+<!-- Content ends -->
+
+<!-- News Feed -->
+<div id="news_feed" class="mg10 pad10">
+	<div id="news_slider">	
+		<ul>
+			<li><a href="#">1. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">2. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">3. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">4. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">5. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">6. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">7. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+		</ul>
+	</div>
+</div>
+<!-- News Feed -->
+
+<!-- Footer -->
+<!-- Footer ends -->
+
+<!-- Scripts -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.js"></script>
+	<script type="text/javascript" src="js/dropDown.js"></script>
+	<script type="text/javascript" src="js/haccordion.js"></script>
+	<script type="text/javascript" src="js/newsrotate.js"></script>
+	<script type="text/javascript" src="js/retailSelector.js"></script>
+	<script type="text/javascript" src="js/slideShow.js"></script>
+	<script type="text/javascript" src="js/starify.js"></script>
+	<script type="text/javascript">
+		var RLW = 350,
+			multi = true;
+		
+		function pageSpecificFunctions() {
+			$('#slideshow').slideshow({
+				navButtons: false,
+				selectionArrow: true,
+				userSlideDimensions: mainContentResize,
+				autoplay: true
+			});
+			
+			$('#hot_content').horizontalAccordion();
+
+			$("#priceAlert_slideshow").slideshow({
+				userSlideDimensions: priceAlertContentResize
+			});
+		}
+		function pageSpecificResize() {
+			return;
+		}
+	</script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		mainContentHover();
+		function priceAlertContentResize(elem, container) {
+			elem.children('.pricealert_pic').first().width(container.innerWidth());
+			elem.children('.pricealert_pic').first().height(container.innerHeight());
+		}
+	</script>
+<!-- Scripts ends -->
+</body>
+</html>

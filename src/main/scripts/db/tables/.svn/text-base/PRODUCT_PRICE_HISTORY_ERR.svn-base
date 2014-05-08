@@ -1,0 +1,17 @@
+use PRODUCTS
+DROP TABLE IF EXISTS PRODUCT_PRICE_HISTORY_ERR;
+/*
+RETAILER_ID is actually not required to be kept in this table,
+but is required for figuring out what was the last record updated
+in this table for a particular retailer. This is required if the 
+file upload fails for a retailer
+*/
+CREATE table PRODUCT_PRICE_HISTORY_ERR
+( 
+	PRODUCT_ID INTEGER(8),	
+	TIME DATETIME,	
+	PRICE FLOAT,
+	RETAILER_ID VARCHAR(20),		
+	TIME_MODIFIED DATETIME
+) ENGINE=InnoDB;
+describe PRODUCT_PRICE_HISTORY_ERR;	

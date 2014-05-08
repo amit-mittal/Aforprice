@@ -1,0 +1,19 @@
+# m h  dom mon dow   command
+
+#KEEP ANY CHANGES in SYNC with src/main/scripts/shell/cronjob_root_primarydb_box for backup.
+
+#clock sync
+0 0 * * * /etc/cron.daily/ntpdate
+
+#SPHINX jobs
+#rebuild main index at 1:30 am everyday, this doesn't block any query
+30  0 * * *	  indexer --rotate --config /etc/sphinxsearch/sphinx.conf productMain >> /var/log/crawler/sphinx-product-main-index.log
+#build delta index to pickup new changes, run this every hour, at 45th minute 
+45  * * * *	  /home/batchprod/bin/sphinx_product_delta_update.sh >> /var/log/crawler/sphinx-product-delta-index.log
+
+#/home/batchprod/bin/sphinx_product_delta_update.sh runs below two commands
+#	indexer --rotate --config /etc/sphinxsearch/sphinx.conf productDelta 
+#	indexer --config /etc/sphinxsearch/sphinx.conf --merge productMain productDelta --rotate
+
+#KEEP ANY CHANGES in SYNC with src/main/scripts/shell/cronjob_root_primarydb_box for backup.
+

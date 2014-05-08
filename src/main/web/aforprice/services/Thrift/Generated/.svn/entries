@@ -1,0 +1,40 @@
+10
+
+dir
+2167
+svn://73.33.4.220:1441/alpha/trunk/crawler/src/main/web/aforprice/services/Thrift/Generated
+svn://73.33.4.220:1441/alpha
+
+
+
+2014-05-05T05:26:59.285021Z
+2160
+ashish
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b857e4fd-1b5e-4221-959f-fbdceda52d47
+
+Config
+dir
+
+PriceAlert
+dir
+
+Retailer
+dir
+
+User
+dir
+

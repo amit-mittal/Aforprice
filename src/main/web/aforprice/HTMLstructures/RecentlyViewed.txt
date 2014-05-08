@@ -1,0 +1,58 @@
+<ul>
+						<li>
+			<div class="product_small_horizontal">
+				<div class="product_thumbnail">
+					<img src="http://www.toysrus.com/graphics/product_images/pTRU1-4798058t130.jpg">
+				</div>
+				<div class="prod_details">
+					<div class="prod_details_header"><a href="product.php?retailer=
+Notice: Undefined variable: retailer in /media/work/workspace/crawler/src/main/web/aforprice/user/recentlyViewed.php on line 26
+&amp;prodid=2499593" target="_blank">KidKraft Pink Retro Kitchen and Refrigerator</a></div>
+					<div class="prod_detail"><span class="name">Price: </span><span class="value" style="vertical-align: top;"><span class="price">$</span></span></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</li>
+				<li>
+			<div class="product_small_horizontal">
+				<div class="product_thumbnail">
+					<img src="http://www.toysrus.com/graphics/product_images/pTRU1-4798058t130.jpg">
+				</div>
+				<div class="prod_details">
+					<div class="prod_details_header"><a href="product.php?retailer=
+Notice: Undefined variable: retailer in /media/work/workspace/crawler/src/main/web/aforprice/user/recentlyViewed.php on line 26
+&amp;prodid=2499593" target="_blank">KidKraft Pink Retro Kitchen and Refrigerator</a></div>
+					<div class="prod_detail"><span class="name">Price: </span><span class="value" style="vertical-align: top;"><span class="price">$</span></span></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</li>
+				<li>
+			<div class="product_small_horizontal">
+				<div class="product_thumbnail">
+					<img src="http://www.toysrus.com/graphics/product_images/pTRU1-4798058t130.jpg">
+				</div>
+				<div class="prod_details">
+					<div class="prod_details_header"><a href="product.php?retailer=
+Notice: Undefined variable: retailer in /media/work/workspace/crawler/src/main/web/aforprice/user/recentlyViewed.php on line 26
+&amp;prodid=2499593" target="_blank">KidKraft Pink Retro Kitchen and Refrigerator</a></div>
+					<div class="prod_detail"><span class="name">Price: </span><span class="value" style="vertical-align: top;"><span class="price">$</span></span></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</li>
+				<li>
+			<div class="product_small_horizontal">
+				<div class="product_thumbnail">
+					<img src="http://www.toysrus.com/graphics/product_images/pTRU1-11688461t130.jpg">
+				</div>
+				<div class="prod_details">
+					<div class="prod_details_header"><a href="product.php?retailer=
+Notice: Undefined variable: retailer in /media/work/workspace/crawler/src/main/web/aforprice/user/recentlyViewed.php on line 26
+&amp;prodid=7568" target="_blank">LEGO Star Wars Elite Clone Trooper and Commando Droid Battle Pack (9488)</a></div>
+					<div class="prod_detail"><span class="name">Price: </span><span class="value" style="vertical-align: top;"><span class="price">$14.99</span></span></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</li>
+					</ul>

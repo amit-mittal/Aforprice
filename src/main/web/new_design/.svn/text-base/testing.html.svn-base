@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Testing page</title>
+	<link href="css/starify.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/starify.js"></script>
+	<link href="css/starify.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<h1>Testing stars</h1>
+	<div class="stars" data-type="normal" data-rating="4.5">
+	</div>
+	<div style="height: 100px;"></div>
+	<div class="stars big">
+		<div class="filling"></div>
+	</div>
+	<script type="text/javascript">
+		$('.stars').starify();
+	</script>
+</body>
+</html>

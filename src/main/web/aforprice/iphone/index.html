@@ -1,0 +1,180 @@
+<!--
+Chirag Maheswari on 12/19/2013
+
+A simple HTML form to test the different API for iphone in a simpler way. It uses the same ajax code
+used in the plugin to get data.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>plugin PhP testing</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script>
+	   function disableall()
+	   {
+	   	    document.getElementById("receiptid").disabled = true;
+		       document.getElementById("searchkeyid").disabled = true;
+		       document.getElementById("productid").disabled = true;
+		       document.getElementById("upcid").disabled = true;
+		       document.getElementById("retailerid").disabled = true;
+		       document.getElementById("productsid").disabled = true;
+		       document.getElementById("userid").disabled = true;
+		       document.getElementById("alertsid").disabled = true;
+		       document.getElementById("imageid").disabled = true;
+		       document.getElementById("udid").disabled = true;
+		       document.getElementById("devicetoken").disabled = true;
+
+	   }
+	   function dosomething()
+	   {
+	       selectedTask = document.getElementById("taskid").value;
+		   if( selectedTask == "get_product_by_upc")
+		   {
+		       disableall();
+		       document.getElementById("upcid").disabled = false;
+		       document.getElementById("retailerid").disabled = false;
+  	       }
+		   if( selectedTask == "get_topdrops")
+		   {
+		       disableall();
+		       document.getElementById("retailerid").disabled = false;
+  	       }
+
+  	       if( selectedTask == "get_retailers")
+		   {
+		       disableall();
+  	       }
+		   if( selectedTask == "track_products")
+		   {
+		       disableall();
+		       document.getElementById("retailerid").disabled = false;
+		       document.getElementById("productsid").disabled = false;
+		       document.getElementById("userid").disabled = false;
+  	       }
+		   if( selectedTask == "get_alerts")
+		   {
+		       disableall();
+		       document.getElementById("userid").disabled = false;
+  	       }
+  	       if( selectedTask == "search_products")
+		   {
+		       disableall();
+		       document.getElementById("searchkeyid").disabled = false;
+  	       }
+  	       if( selectedTask == "get_products_from_receipt")
+		   {
+		       disableall();
+		       document.getElementById("receiptid").disabled = false;
+  	       }
+  	       if( selectedTask == "get_products_from_receipt")
+		   {
+		       disableall();
+		       document.getElementById("receiptid").disabled = false;
+  	       }
+  	         if( selectedTask == "change_alert")
+		   {
+		       disableall();
+		       document.getElementById("retailerid").disabled = false;
+		       document.getElementById("alertsid").disabled = false;
+		       document.getElementById("userid").disabled = false;
+  	       }
+           if( selectedTask == "scan_receipt")
+		    {
+		       disableall();
+		       document.getElementById("imageid").disabled = false;
+  	       }
+  	       if( selectedTask == "upload_credentials")
+		    {
+		   		disableall();
+		   		document.getElementById("userid").disabled = false;
+		   		document.getElementById("udid").disabled = false;
+		   		document.getElementById("devicetoken").disabled = false;
+  	       }
+
+	   }
+	</script>
+</head>
+
+<body onload="dosomething()">
+
+<form action="request.php" method="post" enctype="multipart/form-data">
+	<fieldset>
+		Data Type:
+		<select name="data_type" value="dummy">
+			<option value="dummy">Dummy</option>
+			<option value="real">Real</option>
+			<option value="real">Test</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		Retailer:
+		<select name="retailer" id="retailerid" value="dummy" disabled="true">
+			<option value="toysrus">ToysRUs</option>
+			<option value="walmart">Walmart</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		Action:
+		<select name="task" id="taskid" value="change_alert" onchange="dosomething()" >
+			<option value="get_retailers">Get Retailer</option>
+			<option value="get_topdrops">Get Top Drops</option>
+			<option value="get_product_by_upc">Get Products By UPC</option>
+			<option value="get_products_from_receipt">Get Products From Receipt</option>
+			<option value="get_alerts">Alert(Get): Get Alerts</option>
+			<option value="track_products">Alert(Add):Track Products</option>
+			<option value="change_alert">Alert(Upd): Change Alert</option>
+			<option value="search_products">Search Products</option>
+			<option value="get_price_history">Get Price History</option>
+			<option value="scan_receipt">Scan Receipt</option>
+			<option value="upload_credentials">Upload Credentials</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		Expected Reply:
+		<select name="expected_reply" value="success">
+			<option value="success">Success</option>
+			<option value="partial_success">Partial Success</option>
+			<option value="failure">Failure</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		Arguments <br>
+		User Email: <input id="userid" name="user" value="user@email.com" disabled="true"> <br>
+		UPC: <input id="upcid" name="upc" value="upc123" disabled="true"> <br>
+		Receipt: <input id="receiptid" name="receipt" value="product 123456 7548 9833" disabled="true"> <br>
+		Search: <input id="searchkeyid" name="search_key" value="key" disabled="true"> <br>
+		Product: <input id="productid" name="product" value="product1" disabled="true"> <br>
+		Image ID: <input id="imageid" name="imageid" value="user@email.com:GUID" disabled="true"> <br>
+		UDID: <input id="udid" name="udid" value="UDID 1234567890                 " disabled="true"> <br>
+		Device Token: <input id="devicetoken" name="devicetoken" value="Device Token 1234567890        " disabled="true"> <br>
+
+		Products <br>
+
+		<textarea name="products" rows="5" cols="125" disabled="true" id="productsid" >
+[
+{"name":"product1", "productId":1000034, "purchasePrice":20.99, "alertPrice":10.99, "goodUntilDate":"20140707", "purchasedate":"20140507"},
+{"name":"product2", "productId":1000033, "purchasePrice":32.95, "alertPrice":15.99, "goodUntilDate":"20140806", "purchasedate":"20140404"}
+]
+		</textarea><br>
+		alerts<br>
+		<textarea name="alerts" rows="5" cols="125" disabled="true" id="alertsid" height="40">
+[
+{"name":"product1", "alertId":33, "productId":1000034, "alertPrice":10.99, "goodUntilDate":"20140707", "purchasedate":"20140507", "active":1},
+{"name":"product2", "alertId":32, "productId":1000033, "alertPrice":15.99, "goodUntilDate":"20140806", "purchasedate":"20140404", "active":1}
+]
+		</textarea>
+		<!--<input name="products"  id="productsid" disabled="true">-->
+	<br>
+    Image File : <input type="file" name="image" /> <br>
+
+	</fieldset>
+	<input type="submit">
+</form>
+<br>
+<div id="result">
+</div>
+
+</body>
+</html>

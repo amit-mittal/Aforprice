@@ -1,0 +1,257 @@
+Method 1:
+			<div class="slide_selected" style="height: 420px; border-bottom: 1px solid #666;">
+				<div id="slide_1" class="slide" data-widthratio="1" data-widthparts="3">
+					<div class="product_medium" style="border: 1px solid red;">
+						<div class="product_thumbnail">
+							<img src="product/product.png" />
+						</div>
+						<div class="prod_details" style="display: inline-block;">
+							<div class="prod_details_header">Product Name comes here</div>
+							<div class="prod_detail"><span class="name">Customer Reviews: </span><div class="stars normal" data-type="normal" data-rating="4.5" style="height: 20px; width: 105px;"><div class="filling" style="height: 20px; width: 90px;"></div></div><br/><span class="value">4.4 out of 5 (100 Reviews)</span></div>
+							<div class="prod_detail"><span class="name">Best Price: </span><span class="value" style="vertical-align: top;"><span style="color: #0066a8;">Retailer pic</span> (1 dec - 10dec, 2012)</span></div>
+							<div class="prod_detail">
+								<table class="prod_prices">
+									<tbody><tr>
+										<td rowspan="2" width="100"><span class="price_mb">$19.99</span></td>
+										<td>Min: <span class="price">$15.00</span> - Walmart</td>
+									</tr>
+									<tr>
+										<td>Max: <span class="price">$23.00</span> - Bestbuy</td>
+									</tr>
+								</tbody></table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="slide_2" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_3" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_4" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_5" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_6" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_7" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_8" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_9" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_10" class="slide"  data-widthratio="1" data-widthparts="3">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div class="product_graph" id="main_graph" data-widthratio="2" data-widthparts="3">
+				</div>
+			</div>
+			<div class="slide_thumbnail" class="bod" style="height: 70px; overflow: hidden;">
+				<div id="slide_select_arrow" style="width: 10px; height: 9px; background: url('img/spry_1.png') -53px -4px; position: relative; left: 0px; top: 1px; "></div>
+				<ul>
+					<li data-slide="slide_1"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_2"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_3"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_4"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_5"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_6"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_7"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_8"><img src="img/thumb.png" width="140" height="50" /></li> 
+					<li data-slide="slide_9"><img src="img/thumb.png" width="140" height="50"/></li>
+					<li data-slide="slide_10"><img src="img/thumb.png" width="140" height="50"/></li>
+				</ul>
+			</div>
+Method 2:
+			<div class="slide_selected" style="height: 420px; border-bottom: 1px solid #666;">
+				<div class="product_graph" id="main_graph">
+				</div>
+				<div id="slide_1" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_2" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_3" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_4" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_5" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_6" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_7" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_8" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_9" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>0066a8
+				</div>
+				<div id="slide_10" class="slide">
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+			</div>
+			<div class="slide_thumbnail" class="bod" style="height: 70px; overflow: hidden;">
+				<div id="slide_select_arrow" style="width: 10px; height: 9px; background: url('img/spry_1.png') -53px -4px; position: relative; left: 0px; top: 1px; "></div>
+				<ul>
+					<li data-slide="slide_1"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_2"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_3"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_4"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_5"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_6"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_7"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_8"><img src="img/thumb.png" width="140" height="50" /></li> 
+					<li data-slide="slide_9"><img src="img/thumb.png" width="140" height="50"/></li>
+					<li data-slide="slide_10"><img src="img/thumb.png" width="140" height="50"/></li>
+				</ul>
+			</div>
+Method 3:
+			<div class="slide_selected" style="height: 420px; border-bottom: 1px solid #666;">
+				<div id="slide_1" class="slide" style="display: block;">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 1</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_2" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 2</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_3" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 3</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_4" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 4</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_5" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 5</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_6" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 6</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_7" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 7</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_8" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 8</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+				<div id="slide_9" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 9</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>0066a8
+				</div>
+				<div id="slide_10" class="slide">
+					<div class="product_graph">
+						<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 10</span></h1>
+					</div>
+					<div class="product_image">
+						<div class="arrow" style="position: absolute; right: 0; bottom: 0;"><img src="img/arrow.png" /></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="slide_thumbnail" class="bod" style="height: 70px; overflow: hidden;">
+				<div id="slide_select_arrow" style="width: 10px; height: 9px; background: url('img/spry_1.png') -53px -4px; position: relative; left: 0px; top: 1px; "></div>
+				<ul>
+					<li data-slide="slide_1"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_2"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_3"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_4"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_5"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_6"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_7"><img src="img/thumb.png" width="140" height="50" /></li>
+					<li data-slide="slide_8"><img src="img/thumb.png" width="140" height="50" /></li> 
+					<li data-slide="slide_9"><img src="img/thumb.png" width="140" height="50"/></li>
+					<li data-slide="slide_10"><img src="img/thumb.png" width="140" height="50"/></li>
+				</ul>
+			</div>

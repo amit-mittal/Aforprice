@@ -1,0 +1,21 @@
+<div class="compare_bar">
+		<div class="right sort_by">
+			Sort By:
+			<select class="sort_by_option">
+				<option selected="selected">Best Selling</option>
+				<option>Price: low to high</option>
+				<option>Price: high to low</option>
+			</select>
+		</div>
+		<div class="compare_list">
+			Compare upto 5 items
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<button class="compare_button"></button>
+		</div>
+	</div>

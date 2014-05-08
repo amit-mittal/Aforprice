@@ -1,0 +1,18 @@
+<div id="sidebar">
+ 		<div id="market">
+ 			<div class="div_head pad10">
+ 				Market Index
+ 			</div>
+			<div>
+			</div>
+		</div>
+	<!-- Price Alerts -->
+	<div id="price_alert" class="mg10tb mgdiv" style="height: 240px;">
+			<div class="div_head pad10" style="background: #ed1c24;">
+				Price Alert
+			</div>
+			<div id="priceAlert_slideshow">
+			</div>
+		</div>
+	<!-- Price Alerts end -->
+	</div>

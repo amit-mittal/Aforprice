@@ -1,0 +1,90 @@
+<div id="overview" class="bodbot pad10 mg10lr">
+		<div class="pad10">
+			<div style="display: inline-block;width: 250px; margin-right: 40px;  border-right: 1px #666667 solid;">
+				<div id="product_image">
+					
+					<img src="product/product.png" width="150" height="168" />
+					<div class="product_header">Product Name comes here</div>
+					<div class="overview"></span><div class="stars" data-type="normal" data-rating="3.5">
+					</div><span class="value"> 4.4/5 (</span>100 Reviews <span class="value">)</span></div>
+					<div class="overview">Best Buy: </span><span class="price">$19.99</span></div>
+					<div class="overview">Max: </span><span class="price">$19.99</span></div>
+					<div class="overview">Min: </span><span class="price">$19.99</span></div>
+					<button class="add_workspace" title="add product to workspace"></button>
+					<button class="add_pricealert" title="Set price alert"></button>
+					
+					<div style="text-align: center; vertical-align: middle;">
+					<input type="checkbox" class="add_prod_compare"> Compare
+					</div>
+				</div>
+				
+				
+			</div>
+			
+			<div style="display: inline-block;width: 250px; margin-right: 40px;  border-right: 1px #666667 solid;">
+				<div id="product_image">
+					
+					<img src="product/product.png" width="150" height="168" />
+					<div class="product_header">Product Name comes here</div>
+					<div class="overview"></span><div class="stars" data-type="normal" data-rating="3.5">
+					</div><span class="value"> 3.4/5 (</span>100 Reviews<span class="value">)</span></div>
+					<div class="overview">Best Buy: </span><span class="price">$19.99</span></div>
+					<div class="overview">Max: </span><span class="price">$19.99</span></div>
+					<div class="overview">Min: </span><span class="price">$19.99</span></div>
+					<button class="add_workspace"  title="add product to workspace"></button>
+					<button class="add_pricealert" title="Set price alert"></button>
+					
+					<div style="text-align: center; vertical-align: middle;">
+					<input type="checkbox" class="add_prod_compare"> Compare
+					</div>
+				</div>
+				
+			</div>
+		</div>	
+		<div class="pad10">
+			
+			<div style="display: inline-block;width: 250px; margin-right: 40px;  border-right: 1px #666667 solid;">
+				<div id="product_image">
+					
+					<img src="product/product.png" width="150" height="168" />
+					<div class="product_header">Product Name comes here</div>
+					<div class="overview"></span><div class="stars" data-type="normal" data-rating="3.5">
+					</div><span class="value"> 3.4/5 (</span>100 Reviews<span class="value">)</span></div>
+					<div class="overview">Best Buy: </span><span class="price">$19.99</span></div>
+					<div class="overview">Max: </span><span class="price">$19.99</span></div>
+					<div class="overview">Min: </span><span class="price">$19.99</span></div>
+					<button class="add_workspace" title="add product to workspace"></button>
+					<button class="add_pricealert" title="Set price alert"></button>
+					
+					<div style="text-align: center; vertical-align: middle;">
+					<input type="checkbox" class="add_prod_compare"> Compare
+					</div>
+				</div>
+				
+			</div>
+			
+			<div style="display: inline-block; margin-right: 10px;">
+				<div id="product_image">
+					
+					<img src="product/product.png" width="150" height="168" />
+					<div class="product_header">Product Name comes here</div>
+					<div class="overview"></span><div class="stars" data-type="normal" data-rating="3.5">
+					</div><span class="value"> 4.4/5 (</span>100 Reviews<span class="value">)</span></div>
+					<div class="overview">Best Buy: </span><span class="price">$19.99</span></div>
+					<div class="overview">Max: </span><span class="price">$19.99</span></div>
+					<div class="overview">Min: </span><span class="price">$19.99</span></div>
+					<button class="add_workspace" title="add product to workspace"></button>
+					<button class="add_pricealert" title="Set price alert"></button>
+					
+					<div style="text-align: center; vertical-align: middle;">
+					<input type="checkbox" class="add_prod_compare"> Compare
+					</div>
+				</div>
+				
+			</div>
+		
+		</div>
+		<br>
+		<br>
+		
+	</div>

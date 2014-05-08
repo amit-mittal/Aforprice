@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>how to configure apache</title>
+</head>
+
+<body>
+To install apache type : <i>sudo apt-get install apache2</i>
+<br /><br />
+apache configuration files are in folder : <i>/etc/apache2/</i>
+<ul>
+	<li>apache2.conf - main configuration file(global)</li>
+	<li>ports.conf - configuration to set ports to listen for connections</li>
+	<li>httpd.conf - user configuration file</li>
+	<li>sites-available/ - virtual hosts file for different sites</li>
+	<li>mods-available/ - installed modules for apache</li>
+</ul>
+<em>apache server has to be restarted after configuration changes/module installation/module enabling/new virtual host for the changes to take effect</em><br />
+to start or stop apache type : <i>sudo service apache2 start|stop|restart|graceful-stop</i> (type : sudo service apache2 for more options)<br /><br />
+to enable/disable a module type : <i>sudo a2enmod/a2dismod module_name </i> - it creates/disables a symlink in the folder mods-enabled to the folder mods-available
+<br />to install a new module type : <i>sudo apt-get install libapache2-mod-</i> (press tab to see all the available modules, others can be found from the net)<br />
+to enable/disable a site : <i>sudo a2ensite/a2dissite site_name </i> - it creates/disables a symlink in the folder sites-enabled to the folder sites-available
+<br /><br />
+put website file in /var/www/ (its the directory of the default virtual host)
+<br />they can be accessed from the browser by typing localhost or 127.0.0.1
+<br /><br />
+to install php5 type : <i>sudo apt-get install php5 libapache2-mod-php5</i>
+<br />and then restart apache to get php working.
+<br /><br />
+to get mysql working with php and apache we have to install the mysql/php5-mysql modules for apache. type(mysql should be installed before that) : <i>sudo apt-get install libapache2-mod-auth-mysql php5-mysql</i>
+<br />
+to work with php scripts from command line type: <i>sudo apt-get install php5-cli</i>
+<br />
+to start the extension open the php.ini(/etc/php5/apache2/php.ini) file and uncomment the line extension=mysql.so and restart the apache server.
+<br /><br />
+<h5>to set up server side includes</h5>
+enable the includes module by : <i>sudo apt-get install libapache2-mod-includes</i> (if not already installed) and then enable it by : <i>a2enmod includes</i>
+<br /><br />
+then set the OPTIONS directive in the particular virtual host file. type : <i>OPTIONS Includes</i>
+<br />
+add the server passed file extension .shtml in file mime.conf(/etc/apache2/mods-available/mime.conf) by typing : <br />
+<i>AddType .shtml<br />
+AddOutputFiter Includes .shtml</i>
+<br /><br />
+then add the file index.shtml (for default directory file) in dir.conf(/etc/apache2/mods-available/index.shtml).
+<br /><br />
+<h5>making the server accessible online</h5>
+just open the router website, i.e., http://192.168.1.1<br />
+go to applications and gaming, and port forward 80 to the required machine.<br />
+just type name as "http", start port as "80" and end port as "80" and forward it to the required machine.<br />
+and save the settings.<br />
+then use the external ip address to access the machine's apache server.
+</body>
+</html>

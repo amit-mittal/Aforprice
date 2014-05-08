@@ -1,0 +1,210 @@
+Stuff which should go on wiki when someone takes the lead to setup wiki!!!
+
+
+===Eclipse PHP Development Tools (PDT) 
+http://www.eclipse.org/pdt/release-notes/pdt2_1.php
+installation instruction
+http://wiki.eclipse.org/PDT/Installation#Eclipse_3.7_.2F_Indigo_.2F_PDT_3.0
+
+you also need to install a php executable environment
+http://wiki.eclipse.org/PDT/Installation#Debugger
+
+--haven't tried this yet
+
+Debugging PHP using Eclipse and PDT
+http://www.ibm.com/developerworks/opensource/tutorials/os-php-eclipse-pdt-debug/
+
+===searching prodcuts and categories
+sudo apt-get install sphinxsearch
+sudo dpkg -i package_file.deb
+
+sudo indexer --all --rotate --config /etc/sphinxsearch/sphinx.conf (when searchd is running)
+
+sudo indexer --all --config /etc/sphinxsearch/sphinx.conf
+1. search product using productMain index
+php -f search.php -- -i productMain LCD
+Matches:
+1. doc_id=1, weight=100, name_attr=Samsung LCD 46inch, url=bestbuy.com, time_modified=2012-02-26 09:42:0
+2. doc_id=2, weight=100, name_attr=Samsung LCD 52inch, url=bestbuy.com, time_modified=2012-02-26 09:42:0
+3. doc_id=3, weight=100, name_attr=LCD 123, url=mydreams.com, time_modified=2012-03-17 14:52:39
+
+1. search category using categoryMain index
+
+php -f search.php -- -i categoryMain TV
+1. doc_id=1, weight=100, name_attr=TV &amp; Home Theater, url=, time_modified=2012-02-26 13:31:55
+2. doc_id=9, weight=100, name_attr=TV/DVD Combos, url=http://www.bestbuy.com/site/Televisions/TV-DVD-Combo
+3. doc_id=11, weight=100, name_attr=TV &amp; Home Theater Services, url=http://www.bestbuy.com/site/TV-Hom
+
+
+=====setting up new mysql instance=======
+Copy MySQL Database From One Server To Another Remote Server
+http://www.cyberciti.biz/tips/howto-copy-mysql-database-remote-server.html
+
+
+http://www.ducea.com/2009/01/19/running-multiple-instances-of-mysql-on-the-same-machine/
+one key is to add new directory/files to apparmor setting /etc/apparmor.d/usr.sbin.mysqld
+sudo /etc/init.d/apparmor restart
+==how to start qa instance==
+mysqld_safe --defaults-file=/etc/mysqlqa/my.cnf &
+==connect to qa instance==
+We can connect to our new instance using:
+mysql -S /var/run/mysqld/mysqldqa.sock root
+or
+mysql -h 127.0.0.1 -P 3307  root
+-after adding user
+mysql -S /var/run/mysqld/mysqldqa.sock mysqlqa
+
+===how to add a process to ubuntu startup===
+http://embraceubuntu.com/2005/09/07/adding-a-startup-script-to-be-run-at-bootup/
+
+===mysql commands===
+calling stored proc with out parameter
+call UpdateCategory('Samsung', 'Samsung', 'Unlocked Phones', 'BESTBUY', '', "http://www.bestbuy.com/site/olstemplatemapper.jsp?id=pcat17080&type=page&qp=q70726f63657373696e6774696d653a3e313930302d30312d3031~~", 1, 1, '2012-04-07 11:52:14', @RESULT);
+select @result;
+show create procedure <procname>
+ show index from PRODUCT_DOWNLOAD;
+ SHOW CREATE TABLE PRODUCT_DOWNLOAD;
+ 
+http://dev.mysql.com/doc/refman/5.0/en/commit.html
+//test below, doesn't seem to work
+13.3.1. START TRANSACTION, COMMIT, and ROLLBACK Syntax
+START TRANSACTION [WITH CONSISTENT SNAPSHOT]
+BEGIN [WORK]
+COMMIT [WORK] [AND [NO] CHAIN] [[NO] RELEASE]
+ROLLBACK [WORK] [AND [NO] CHAIN] [[NO] RELEASE]
+SET autocommit = {0 | 1}
+
+
+==new user==
+QA
+mysql> CREATE USER 'mysqlqa'@'%' IDENTIFIED BY 'mysqlPa2s';
+Query OK, 0 rows affected (2.61 sec)
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'mysqlqa'@'%' WITH GRANT OPTION;
+Query OK, 0 rows affected (0.05 sec)
+ The 'mysqlqa'@'%' account uses the '%' wildcard for the host part, so it can be used to connect from any host.
+http://dev.mysql.com/doc/refman/5.1/en/adding-users.html
+
+PRODCUTION
+mysql> CREATE USER 'mysqlprod'@'%' IDENTIFIED BY 'mysqlprodPa2s';
+Query OK, 0 rows affected (2.61 sec)
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'mysqlprod'@'%' WITH GRANT OPTION;
+Query OK, 0 rows affected (0.05 sec)
+GRANT ALL PRIVILEGES ON *.* TO 'mysqlprod'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'mysqlprod'@'192.168.1.120' WITH GRANT OPTION;
+GRANT SELECT ON *.* TO 'mysqlprod'@'%';
+GRANT SELECT ON *.* TO 'mysqlro'@'%';
+
+GRANT ALL PRIVILEGES ON *.* TO 'mysqlprod'@'localhost' WITH GRANT OPTION;
+
+===common msyql queries===
+select * from category_history where time_modified >= "2012-04-13 5PM";
+select count(*) from category where retailer_id = "bestbuy";
+select count(*) from category_history where retailer_id = "walmart";
+=======
+mysqldump -u mysqlprod -p PRODUCTS >  mysql_prod_backup_<date>.out
+show processlist
+SET  SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SELECT @@GLOBAL.tx_isolation, @@tx_isolation; 
+===Logging examples===
+http://logging.apache.org/log4net/release/config-examples.html>>>>>>> .r129
+ sudo service apache2 restart
+
+http://69.136.251.16/files/data_test_page/categoryTree.php?retailer=walmart
+
+http://69.136.251.16/files/data_test_page/prod_hist.php?id=123
+
+username:<your first name>
+password:<your first name>http
+
+show table status like 'PRODUCT_DOWNLOAD';
+
+==data backup==
+use selectinto to create file
+select * from CATEGORY INTO OUTFILE 'CATEGORY_Nov28.out';
+load data to load file
+load data infile 'd:\CATEGORY_25Nov.out' into table category;
+
+If large numbers of rows are deleted from a table, or a table containing variable-length attributes is frequently modified, disk space may be wasted. MySQL doesn't usually remove deleted or modified data; it only marks the location as being no longer in use. Wasted space can affect access speed.
+
+To reorganize a table.by copying data to a temporary location and back again.MySQL provides the OPTIMIZE TABLE command, which should be used periodically. For example:
+
+OPTIMIZE TABLE customer;
+The OPTIMIZE command should be run when the DBMS is offline for scheduled maintenance. The command is nonstandard SQL.
+
+Above command will display many variables. The important parameters are those that impact disk use. MySQL has several main-memory buffer parameters that control how much data is kept in memory for processing. These include:
+
+The record_buffer for scanning all rows in a table
+
+The sort_buffer for ORDER BY and GROUP BY operations
+
+The key_buffer for storing indexes in main memory
+
+The join_buffer for joins that don't use indexes
+
+xczs 
+
+key_buffer = 100M
+innodb_buffer_pool_size = 200M
+The size in bytes of the memory buffer InnoDB uses to cache data and indexes of its tables. The default value is 8MB.
+
+===website===
+how to enable shtml on wamp
+Just create a file called .htaccess in WAMP's WWW folder (eg: C:/wamp/www) and copy and paste the followings lines into that file.
+
+# Enable Server Side Includes
+Options +Includes
+
+# Configure file extensions for SSI
+AddType text/html .shtml
+AddOutputFilter INCLUDES .shtml
+
+
+NOTE: Make sure you create the .htaccess file through Notepad first. Just open Notepad and choose File > Save As. In the file name box type the following (including the quotes)
+
+sudo /etc/init.d/svnserve start
+
+http://www.mysqlperformancetuning.com/how-to-reduce-table_locks_waited-in-mysql-myisam
+mysql> show status like '%\_locks\_%';
++-----------------------+----------+
+| Variable_name         | Value    |
++-----------------------+----------+
+| Table_locks_immediate | 56591392 |
+| Table_locks_waited    | 10192250 |
++-----------------------+----------+
+
+
+===How to install Oracle Java on Ubuntu (it is not part of apt-get)===
+http://ubuntuforums.org/showthread.php?t=2009265
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+
+==How to install Jenkins on Ubuntu===
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+===How to get list of installed softwares on Ubuntu===
+dpkg --get-selections 
+
+===how to run jenkins as batchprod===
+http://stackoverflow.com/questions/6692330/how-to-run-jenkins-as-a-different-user
+ sudo chown -R batchprod /var/log/jenkins
+ sudo chown -R batchprod /var/lib/jenkins/
+ sudo chown -R batchprod /var/run/jenkins/
+ sudo chown -R batchprod /var/cache/jenkins/
+ sudo service jenkins restart
+ 
+ ==how to get java_home
+ batchprod@pinkocean:~$ readlink -f /usr/bin/java
+/usr/lib/jvm/java-7-oracle/jre/bin/java
+java_home is /usr/lib/jvm/java-7-oracle
+
+===thrift===
+==installing on windows==
+http://wiki.apache.org/thrift/ThriftInstallationWin32 

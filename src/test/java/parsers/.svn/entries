@@ -1,0 +1,34 @@
+10
+
+dir
+2167
+svn://73.33.4.220:1441/alpha/trunk/crawler/src/test/java/parsers
+svn://73.33.4.220:1441/alpha
+
+
+
+2014-04-28T02:37:20.680190Z
+2148
+arpan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b857e4fd-1b5e-4221-959f-fbdceda52d47
+
+robotsProtocol
+dir
+
+util
+dir
+

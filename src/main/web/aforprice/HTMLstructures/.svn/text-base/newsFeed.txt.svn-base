@@ -1,0 +1,13 @@
+<div id="news_feed" class="mg10 pad10">
+	<div id="news_slider">	
+		<ul>
+			<li><a href="#">1. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">2. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">3. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">4. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">5. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">6. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+			<li><a href="#">7. News Snippet News Snippet News Snippet News Snippet News Snippet</a> <span class="news_info">| News Source - News Date</span></li>
+		</ul>
+	</div>
+</div>

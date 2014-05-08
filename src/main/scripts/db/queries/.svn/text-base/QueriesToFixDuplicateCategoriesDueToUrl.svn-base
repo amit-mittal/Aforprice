@@ -1,0 +1,61 @@
+SELECT RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME, MIN(CATEGORY_ID), COUNT(*) FROM CATEGORY GROUP BY RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME HAVING COUNT(*) > 1;
+
+USE PRODUCTS
+DROP TABLE IF EXISTS TEMP_UNIQ_CATEGORY;
+
+CREATE table TEMP_UNIQ_CATEGORY
+(
+	RETAILER_ID VARCHAR(20),
+	PARENT_CATEGORY_ID VARCHAR(100) NOT NULL,
+	CATEGORY_NAME VARCHAR(100) NOT NULL,
+	CATEGORY_ID INTEGER,
+	PRIMARY KEY USING HASH (RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME)
+);
+describe TEMP_UNIQ_CATEGORY;
+
+INSERT INTO TEMP_UNIQ_CATEGORY
+SELECT RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME, MIN(CATEGORY_ID)  FROM CATEGORY GROUP BY RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME;
+--spot check
+mysql> SELECT RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME, CATEGORY_ID FROM CATEGORY where PARENT_CATEGORY_ID = "" and CATEGORY_NAME = "Appliances";
++-------------+--------------------+---------------+-------------+
+| RETAILER_ID | PARENT_CATEGORY_ID | CATEGORY_NAME | CATEGORY_ID |
++-------------+--------------------+---------------+-------------+
+| BESTBUY     |                    | Appliances    |        1164 |
+| bestbuy     |                    | Appliances    |        6464 |
++-------------+--------------------+---------------+-------------+
+SELECT RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME, CATEGORY_ID FROM CATEGORY where PARENT_CATEGORY_ID = "Pilates &amp; Yoga" and CATEGORY_NAME = "Exercise Balls";
+
+ RETAILER_ID | PARENT_CATEGORY_ID | CATEGORY_NAME  | CATEGORY_ID |
+-------------+--------------------+----------------+-------------+
+ BESTBUY     | Pilates &amp; Yoga | Exercise Balls |         966 |
+ BESTBUY     | Pilates &amp; Yoga | Exercise Balls |        5330 |
+ 
+ SELECT RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME, CATEGORY_ID FROM CATEGORY where PARENT_CATEGORY_ID = "" and CATEGORY_NAME = "Outdoors &amp; Recreation";
+ WALMART     |                    | Outdoors &amp; Recreation |        1389 |
+walmart     |                    | Outdoors &amp; Recreation |        7371 |
+
+
+--table cleanup
+DELETE FROM CATEGORY WHERE CATEGORY_ID NOT IN (SELECT CATEGORY_ID FROM TEMP_UNIQ_CATEGORY)
+
+
+--spot check after
+mysql> SELECT RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME, CATEGORY_ID FROM CATEGORY where PARENT_CATEGORY_ID = "" and CATEGORY_NAME = "Appliances";
++-------------+--------------------+---------------+-------------+
+| RETAILER_ID | PARENT_CATEGORY_ID | CATEGORY_NAME | CATEGORY_ID |
++-------------+--------------------+---------------+-------------+
+| BESTBUY     |                    | Appliances    |        1164 |
+| bestbuy     |                    | Appliances    |        6464 |
++-------------+--------------------+---------------+-------------+
+SELECT RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME, CATEGORY_ID FROM CATEGORY where PARENT_CATEGORY_ID = "Pilates &amp; Yoga" and CATEGORY_NAME = "Exercise Balls";
+
+ RETAILER_ID | PARENT_CATEGORY_ID | CATEGORY_NAME  | CATEGORY_ID |
+-------------+--------------------+----------------+-------------+
+ BESTBUY     | Pilates &amp; Yoga | Exercise Balls |         966 |
+ BESTBUY     | Pilates &amp; Yoga | Exercise Balls |        5330 |
+ 
+ SELECT RETAILER_ID, PARENT_CATEGORY_ID, CATEGORY_NAME, CATEGORY_ID FROM CATEGORY where PARENT_CATEGORY_ID = "" and CATEGORY_NAME = "Outdoors &amp; Recreation";
+ WALMART     |                    | Outdoors &amp; Recreation |        1389 |
+walmart     |                    | Outdoors &amp; Recreation |        7371 |
+select RETAILER_ID, PRODUCT_NAME, count(*) from PRODUCT group by RETAILER_ID, PRODUCT_NAME having count(*) > 1;
+

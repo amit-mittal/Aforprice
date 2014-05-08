@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+
+#content {
+	min-height:500px;
+}
+
+#featured {
+	min-height:500px;
+	margin:30px 20px;margin-left:200px;
+	overflow: hidden;
+}
+
+#filters {
+	width: 200px;
+}
+.filter {
+	margin-top: 10px;
+}
+.fixH {
+	max-height: 150px;
+	overflow: auto;
+}
+
+#results {
+	width: 750px;
+}
+.result {
+	border-bottom: dashed 1px gray;
+	margin-top: 15px;
+}
+
+#compare_suggest {
+	background-color: #FFF;
+	position: absolute;
+	display: none;
+	width: 200px; 
+	height: 200px; 
+	overflow: auto; 
+	z-index: 100;
+}
+
+.high_column {
+	width: 180px;
+}
+
+.subtit {
+	color: #CCC;
+}
+
+div.image img.productImage {
+height: 160px;
+width: 160px;
+}
+
+div.product{
+	float:left;
+	width:20%;
+}
+.unfloat{
+	clear:both;
+	line-height:0;
+}
+div.prevPrice{
+	text-decoration:line-through;
+}

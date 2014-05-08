@@ -1,0 +1,14 @@
+package adhoc;
+
+public class QueriesTemp {	
+	public static final  String GET_NEW_PRODUCT_ID = "Select MAX(PRODUCT_ID) FROM PRODUCTS.PRODUCT WHERE RETAILIER_ID=?" +
+														" AND CATEGORY_NAME=? AND PRODUCT_NAME=?";
+	public static final String DEL_DUPLICATE_PRODUCTS = "Delete FROM PRODUCTS.PRODUCT WHERE RETAILER_ID=? AND CATEGORY_NAME=?" +
+														 " AND PRODUCT_NAME=? AND PRODUCT_ID!=?";
+	public static final String GET_PRICE_HIST_TO_FIX = "Select PRODUCT_ID, TIME, PRICE, RETAILER_ID, TIME_MODIFIED FROM " +
+														"PRODUCTS.PRODUCT_PRICE_HISTORY WHERE PRODUCT_ID >? ORDER BY " +
+														"PRODUCT_ID, TIME";
+	public static final  String INSERT_PRODUCT_HIST = "INSERT INTO PRODUCT_PRICE_HISTORY_NEW (PRODUCT_ID, TIME, PRICE, RETAILER_ID, TIME_MODIFIED) " +
+			 "VALUES (?, ?, ?, ?, ?)";
+	
+}

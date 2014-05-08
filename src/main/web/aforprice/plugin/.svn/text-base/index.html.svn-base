@@ -1,0 +1,183 @@
+<!-- 
+Chirag Maheswari on 12/19/2013
+
+A simple HTML form to test the different API for plugin in a simpler way. It uses the same ajax code
+used in the plugin to get data.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>plugin PhP testing</title>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+</head>
+
+<body>
+
+<form action="request.php" method="get">
+	<!--<fieldset>
+		<input type="radio" name="request_type" value="1" checked="checked" /> GET
+		<input type="radio" name="request_type" value="2" /> POST
+	</fieldset>-->
+	<fieldset>
+		Retailer: <input type="text" name="retailer">
+	</fieldset>
+	<fieldset>
+		Action: <input type="text" name="task">
+	</fieldset>
+	<fieldset>
+		Put any additional data in json format to send.
+		<textarea name="urls" rows="15" cols="125">
+		</textarea>
+	</fieldset>
+
+	<input type="submit">
+</form>
+
+<div id="result">
+</div>
+
+<script type="text/javascript">
+var ajaxURL = "http://127.0.0.1:85/plugin/";
+
+var ajax = {
+	addOptions: function(jqxhr, options) {
+		/* If there are extra options, we need
+		 * to add that to the different callbacks */
+		if((options !== null) && (options !== undefined) && (typeof options !== "undefined")) {
+			if(options.hasOwnProperty("success")) {
+				jqxhr.done(options['success']);
+			}
+
+			if(options.hasOwnProperty("fail")) {
+				jqxhr.fail(options['fail']);
+			}
+
+			if(options.hasOwnProperty("complete")) {
+				jqxhr.always(options['complete']);
+			}
+		}
+	},
+
+	makeAjaxQuery: function(requestType, path, data, callback, failCallback, options) {
+		var startTime, timeDiff;
+
+		var jqxhr = $.ajax({
+			type: requestType,
+
+			url: path,
+
+			beforeSend: function(xhr) {
+				console.log(requestType +" request to " + path + "started.");
+				startTime = new Date();
+			},
+
+			data: data,
+
+			success: callback,
+
+			error: failCallback,
+
+			dataType: "json"
+		})
+				.done(function(data, textStatus, xhr) {
+					timeDiff = (new Date()) - startTime;
+					console.log(requestType + " to " + path + " completed with: " + textStatus + ". Time taken: " + timeDiff.toString());
+				})
+				.fail(function(xhr, textStatus, error) {
+					timeDiff = (new Date()) - startTime;
+
+					console.warn(requestType + " to " + path + " failed with: " + textStatus + ", " + error + ". Time taken: " + timeDiff.toString());
+					console.warn("data: " + data.toString());
+				});
+
+		ajax.addOptions(jqxhr, options);
+
+		return jqxhr;
+	},
+
+	getJson: function(path, data, callback, failCallback, options) {
+		return ajax.makeAjaxQuery("GET", ajaxURL + path, data, callback, failCallback, options);
+	},
+
+	postJson: function(path, data, callback, failCallback, options) {
+		return ajax.makeAjaxQuery("POST", ajaxURL + path, data, callback, failCallback, options);
+	}
+};
+
+var e;
+
+function failFunction(xhr, textStatus, error) {
+	$("#result").html(textStatus + ", " + error);
+}
+
+function successFunction(ret, stat, xhr) {
+	$("#result").html(ret);
+}
+
+//$(document).ready(function (argument) {
+//	$('form').on('submit', function(event) {
+//		event.preventDefault();
+//		event.stopPropagation();
+//
+//		var form = event.target;
+//		e = form;
+//		var request_type = parseInt($(form).find('input[name=request_type]:checked').val()),
+//			retailer = $(form).find('input[name=retailer]').val(),
+//			apiCalled = $(form).find('input[name=action]').val(),
+//			data = ($(form).find('textarea').val()).trim();
+//			if(data != "") {
+//				data = $.parseJSON(data);
+//			} else {
+//				data = {};
+//			}
+//
+//		data.retailer = retailer;
+//		data.task = apiCalled;
+//
+//		if(request_type == 1) {
+//			ajax.getJson("request.php", data, successFunction, {
+//				fail: failFunction
+//			});
+//		} else {
+//			ajax.postJson("request.php", data, successFunction, {
+//				fail: failFunction
+//			});
+//		}
+//	});
+//});
+
+urls = [];
+var requestObject = {
+	task: 0,
+	retailer: 'toysrus',
+	page: "http://toysrus.com/",
+	urls: JSON.stringify(urls)
+};
+
+//ajax.postJson(
+//		"request.php",
+//
+//		requestObject,
+//
+//		successFunction,
+//
+//		failFunction
+//);
+$.ajax({
+	type: "POST",
+
+	dataType: "text",
+
+	url: ajaxURL + "request.php",
+
+	data: requestObject,
+
+	success: successFunction,
+
+	error: failFunction
+});
+</script>
+</body>
+</html>

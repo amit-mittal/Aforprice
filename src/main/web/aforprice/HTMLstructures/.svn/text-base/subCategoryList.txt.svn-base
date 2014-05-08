@@ -1,0 +1,10 @@
+<div id="sub_cats" class="bodbot">
+		<ul>
+			<li><a href="sub_category.html">sub_cat-1</a></li>
+			<li><a href="sub_category.html">sub_cat-2</a></li>
+			<li><a href="sub_category.html">sub_cat-3</a></li>
+			<li><a href="sub_category.html">sub_cat-4</a></li>
+			<li><a href="sub_category.html">sub_cat-5</a></li>
+			<li><a href="sub_category.html">sub_cat-6</a></li>
+		</ul>
+	</div>

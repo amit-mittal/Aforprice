@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+table#market_index tr th, table#market_index tr td {
+	padding: 5px 5px 5px 10px;
+	width: 100%;
+	text-align: left;
+}
+table#market_index tr {
+	border-bottom: 1px #000 solid;
+}
+table#market_index tr.last {
+	border: none;
+}
+table#market_index tr th {
+	font-weight: 900;
+	font-size: 16px;
+}
+
+/* graphical market index */ 
+table#market_index_quotes tr td{ 
+	padding: 5px 5px 5px 5px; 
+	width: 100%; 
+	text-align: left; 
+} 
+ 	 
+table#market_index_charts tr td{ 
+	padding: 5px 0px; 
+	width: 100%;
+	text-align: left; 
+} 
+table#market_index_charts tr td.bodrt { 
+	border-right: 1px solid #000; 
+} 
+table.market_index_charts tr td.bar_right { 
+	background: #95e195; 
+	border: 1px solid #2cc42c; 
+    border-left: none; 
+} 
+table.market_index_charts tr td.bar_left { 
+	background: #ffaeae; 
+	border: 1px solid #ed1c24; 
+	border-right: none; 
+} 

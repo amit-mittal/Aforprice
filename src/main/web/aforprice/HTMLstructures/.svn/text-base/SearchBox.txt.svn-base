@@ -1,0 +1,21 @@
+<div id="search">
+			<form method="get" action="search.html">
+				<div style="font-weight: 800; color: #FFF; height: 30px; display: inline-block; cursor: pointer;">
+					<div id="select_cat">
+						<span id="selected_cat">All</span>
+						<div class="drop" style="margin: 8px 0px 0px -10px; z-index: 2;">
+							<select name="search_cat" id="search_cat" size="10" style="display: none;">
+								<option value="All" selected="selected">All Categories</option>
+								<option value="cat1" >Category 1</option>
+								<option value="cat2" >Category 2</option>
+							</select>
+						</div>
+						<div style="display: inline-block; height:7px; width: 9px; background: url('img/spry_1.png') -4px -4px no-repeat;"></div>
+					</div>
+				</div>
+				<input id="searchBar" type="text" placeholder="Search" style="padding-left: 10px; height: 27px; outline: 0px; border: none; display: inline-block; width: 751px;">
+				<div style="font-weight: 800; color: #FFF; height: 30px; display: inline-block; cursor: pointer;">
+					<input type="submit" value="GO" style="background: -webkit-linear-gradient(top, #65a3ca 10%, #0066a8 100%);background: -moz-linear-gradient(top, #65a3ca 10%, #0066a8 100%); outline: none; border: none; color: #FFF; font-weight: 800; height: 30px; border-radius: 0px 3px 3px 0px; margin: 0px; font-size: 14px;">
+				</div>
+			</form>
+		</div>

@@ -1,0 +1,97 @@
+10
+
+dir
+2167
+svn://73.33.4.220:1441/alpha/trunk/crawler/src/main/java
+svn://73.33.4.220:1441/alpha
+
+
+
+2014-05-07T03:03:26.200476Z
+2166
+anurag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b857e4fd-1b5e-4221-959f-fbdceda52d47
+
+adhoc
+dir
+
+categories
+dir
+
+concurrent
+dir
+
+datastruct
+dir
+
+db
+dir
+
+entities
+dir
+
+filesystem
+dir
+
+global
+dir
+
+helper
+dir
+
+logger
+dir
+
+management
+dir
+
+mongo
+dir
+
+parsers
+dir
+
+products
+dir
+
+receipts
+dir
+
+servers
+dir
+
+sitemap
+dir
+
+stores
+dir
+
+thrift
+dir
+
+uploader
+dir
+
+users
+dir
+
+util
+dir
+
+work
+dir
+

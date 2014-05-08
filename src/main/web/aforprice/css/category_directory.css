@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+#category_directory {
+	margin: 30px auto;
+}
+
+#category_directory table {
+	border-left: 2px solid #777;
+}
+#category_directory table tr {
+	border-bottom: 1px solid #777;
+}
+#category_directory table tr td.hide {
+	display: none;
+}
+#category_directory table tr.last {
+	border-bottom: none;
+	padding: 0;
+}
+
+#category_directory table tr td{
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	line-height: 175%;
+	padding: 0px 0px 0px 5px;
+}
+
+#category_directory .one_fourth {
+	width: 22%;
+	margin: 1%;
+	display: inline-block;
+	vertical-align: top;
+}
+#category_directory .one_fourth .header {
+	background: #0066a8;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 900;
+	margin: 15px 0px 10px 0px;
+	padding: 3px 0px 3px 2px;
+}
+#category_directory .one_fourth .header a {
+	color: #FFF;
+}

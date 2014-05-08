@@ -1,0 +1,75 @@
+<div id="top_drops" style="margin-right: 10px;">
+		<div class="div_head pad10" style="margin: 0px;">
+			Top Price Drops
+		</div>
+		<div class="mg10 horizontalAccordion mgdiv hot_content">
+			<ol>
+				<li class="slide first">
+					<h2><span>Category1</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide">
+					<h2><span>Category2</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide">
+					<h2><span>Category3</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide">
+					<h2><span>Category4</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide">
+					<h2><span>Category5</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide last">
+					<h2><span>Category6</span></h2>
+					<div>
+					</div>
+				</li>
+			</ol>
+		</div>
+
+		<div class="mg10 horizontalAccordion mgdiv hot_content">
+			<ol>
+				<li class="slide first">
+					<h2><span>Category1</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide">
+					<h2><span>Category2</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide">
+					<h2><span>Category3</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide">
+					<h2><span>Category4</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide">
+					<h2><span>Category5</span></h2>
+					<div>
+					</div>
+				</li>
+				<li class="slide last">
+					<h2><span>Category6</span></h2>
+					<div>
+					</div>
+				</li>
+			</ol>
+		</div>
+		</div>
+	</div>

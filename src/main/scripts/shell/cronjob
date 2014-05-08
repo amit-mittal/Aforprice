@@ -1,0 +1,79 @@
+#KEEP ANY CHANGES in SYNC with src/main/scripts/shell/cronjob for backup. 
+# Category Uploaders: In general, the uploaders are set to run on a daily basis and are staggerred so that not all of them run together, except for the uploaders which take very long t             o run and those and are set to run on a frequency determined based on the amount of time they take to run.
+#WARNING!! THESE ARE SET UP ALPHABETICALLY
+ 0 22 *  * 3,6 /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-amazonbestseller uploader.util.AmazonBestSellerCategoryUploader PRODUCTION
+ 0  8 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-babysrus uploader.util.BabysrusCategoryUploader PRODUCTION
+ 0  8 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-bananarepublic uploader.util.BananaRepublicCategoryUploader PRODUCTION
+ 0  8 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-bjs uploader.util.BJsCategoryUploader PRODUCTION
+30  8 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-bestbuy uploader.util.BBYOpenCategoryUploader PRODUCTION
+30  8 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-costco uploader.util.CostcoCategoryUploader PRODUCTION
+30  8 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-cvs uploader.util.CVSCategoryUploader PRODUCTION
+ 0  9 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-gap uploader.util.GapCategoryUploader PRODUCTION
+ 0  9 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-homedepot uploader.util.HomeDepotCategoryUploader PRODUCTION
+ 0  9 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-jcp uploader.util.JCPCategoryUploader PRODUCTION
+30  9 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-kohls uploader.util.KohlsCategoryUploader PRODUCTION
+30  9 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-macys uploader.util.MacysCategoryUploader PRODUCTION
+30  9 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-lowes uploader.util.LowesCategoryUploader PRODUCTION
+ 0 10 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-oldnavy uploader.util.OldNavyCategoryUploader PRODUCTION
+ 0 10 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-riteaid uploader.util.RiteaidCategoryUploader PRODUCTION
+ 0 10 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-samsclub uploader.util.SamsClubCategoryUploader PRODUCTION
+30 10 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-staples uploader.util.StaplesCategoryUploader PRODUCTION
+30 10 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-target uploader.util.TargetMobileCategoryUploader PRODUCTION
+30 10 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-toysrus uploader.util.ToysrusCategoryUploader PRODUCTION
+ 0 11 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-walgreens uploader.util.WalgreensCategoryUploader PRODUCTION
+ 0 11 *  * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categoryuploader-walmart uploader.util.WalmartCategoryUploader PRODUCTION
+
+#Large Product Parsers: The product parsers start time is staggerred taking into consideration the total time they take to run
+#WARNING!! THESE ARE SET UP ALPHABETICALLY
+0 22 * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-amazonbs servers.ProductsParsingServer PRODUCTION retailer=amazonbs
+0 0  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-bestbuy parsers.BBYOpenParser PRODUCTION
+0 0  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-homedepot servers.ProductsParsingServer PRODUCTION retailer=homedepot
+0 0  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-target servers.ProductsParsingServer PRODUCTION retailer=target
+0 0  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-walmart servers.ProductsParsingServer PRODUCTION retailer=walmart
+
+#Small Product Parsers
+#WARNING!! THESE ARE SET UP ALPHABETICALLY
+0 2  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-babysrus servers.ProductsParsingServer PRODUCTION retailer=babysrus
+0 2  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-bananarepublic servers.ProductsParsingServer PRODUCTION retailer=bananarepublic
+0 2  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-bjs servers.ProductsParsingServer PRODUCTION retailer=bjs
+0 2  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-costco servers.ProductsParsingServer PRODUCTION retailer=costco
+0 3  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-cvs servers.ProductsParsingServer PRODUCTION retailer=cvs
+0 3  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-gap servers.ProductsParsingServer PRODUCTION retailer=gap
+0 3  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-jcpenny servers.ProductsParsingServer PRODUCTION retailer=jcpenny
+0 3  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-kohls servers.ProductsParsingServer PRODUCTION retailer=kohls
+0 4  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-macys servers.ProductsParsingServer PRODUCTION retailer=macys
+0 4  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-lowes servers.ProductsParsingServer PRODUCTION retailer=lowes
+0 4  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-oldnavy servers.ProductsParsingServer PRODUCTION retailer=oldnavy
+0 4  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-riteaid servers.ProductsParsingServer PRODUCTION retailer=riteaid
+0 5  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-samsclub servers.ProductsParsingServer PRODUCTION retailer=samsclub
+0 5  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-staples servers.ProductsParsingServer PRODUCTION retailer=staples
+0 5  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-toysrus servers.ProductsParsingServer PRODUCTION retailer=toysrus
+0 5  * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh parser-walgreens servers.ProductsParsingServer PRODUCTION retailer=walgreens
+
+
+#Disk Clean Up
+0 20 * * *   /home/batchprod/dist/cur/scripts/shell/disk_clean.sh >> /var/log/crawler/disk_clean.log 2>&1 &
+
+#Replication Monitor/Cleanup
+0  * * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh replication-monitor util.ReplicationMonitor PRODUCTION_REPLICA
+0  * * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh replication-monitor util.ReplicationMonitor QA_REPLICA
+0 10 * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh replication-binlog-cleanup util.DbReplicationBinLogsCleanup QA_REPLICA
+0 10 * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor.sh replication-binlog-cleanup util.DbReplicationBinLogsCleanup PRODUCTION_REPLICA
+
+#Reconciler, Product Cleanup
+0  20 * * *  /home/batchprod/dist/cur/scripts/shell/runProductsRecon.sh
+30 20 * * *  /home/batchprod/dist/cur/scripts/shell/generic-executor.sh categories-recon categories.checks.CategoriesReconciler PRODUCTION
+#0  21 * * *  /home/batchprod/dist/cur/scripts/shell/generic-executor.sh products-cleanup products.ProudctsCleanupServer PRODUCTION
+
+
+#Products Migration
+0   7 * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor-migration.sh products-migration-amazon products.ProductsMigration PRODUCTION retailers=amazonbs include=true processName=ProductsMigrationAmazon
+0   7 * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor-migration.sh products-migration products.ProductsMigration PRODUCTION retailers=amazonbs include=false
+0  20 * * *  fuser -k /var/log/crawler/products-migration*.log
+0  21 * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor-migration.sh products-migration-amazon products.ProductsMigration PRODUCTION retailers=amazonbs include=true processName=ProductsMigrationAmazon
+0  21 * * *   /home/batchprod/dist/cur/scripts/shell/generic-executor-migration.sh products-migration products.ProductsMigration PRODUCTION retailers=amazonbs include=false
+0   0 * * *  fuser -k /var/log/crawler/products-migration*.log
+
+ 
+#KEEP ANY CHANGES in SYNC with src/main/scripts/shell/cronjob for backup.  
+

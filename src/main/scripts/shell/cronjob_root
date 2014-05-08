@@ -1,0 +1,12 @@
+#KEEP ANY CHANGES in SYNC with src/main/scripts/shell/cronjob_root for backup. 
+
+#prod backup - sat 12pm
+0 12 * * 6 /home/batchprod/bin/dbbackup.pl -user mysqlprod2 -password mysqlprod2Pa2s -db PRODUCTS -dir /home/batchprod/teradrive/Backup/DB/mysqlprod >> /var/log/crawler/mysqlprod-backup.log
+0 9 * * 6 /home/batchprod/bin/dbbackup.pl -user mysqlprod2 -password mysqlprod2Pa2s -db trac -dir /home/batchprod/teradrive/Backup/DB/mysqlprod >> /var/log/crawler/mysqlprod-trac-backup.log
+0 11 * * 6 /home/batchprod/bin/dbbackup.pl -user  mysqlqa2 -password mysql2Pa2s -socket /var/run/mysqld/mysqldqa.sock -db PRODUCTS -dir /home/batchprod/teradrive/Backup/DB/mysqlqa >> /var/log/crawler/mysqlqa-backup.log
+
+#clock sync
+0 0 * * * /etc/cron.daily/ntpdate
+
+
+#KEEP ANY CHANGES in SYNC with src/main/scripts/shell/cronjob_root for backup. 

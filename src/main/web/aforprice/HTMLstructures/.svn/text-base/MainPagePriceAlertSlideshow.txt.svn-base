@@ -1,0 +1,39 @@
+Method 2:
+<div class="slide_selected" style="height: 150px;">
+					<div id="pricealert_1" class="slide" style="display: block;">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 1</span></h1>
+						</div>
+					</div>
+					<div id="pricealert_2" class="slide">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 2</span></h1>
+						</div>
+					</div>
+					<div id="pricealert_3" class="slide">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 3</span></h1>
+						</div>
+					</div>
+					<div id="pricealert_4" class="slide">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 4</span></h1>
+						</div>
+					</div>
+					<div id="pricealert_5" class="slide">
+						<div class="pricealert_pic">
+							<h1><span style="font-size: 30px; color: black; float: right;">SLIDE 5</span></h1>
+						</div>
+					</div>
+				</div>
+				<div class="slidePrev" style="margin-left: 5px; float: left; display: inline-block; color: #666667; font-size: 12px; cursor: pointer;height: 15px;">Prev</div>
+				<div id="pricealert_thumb" class="slide_thumbnail" style="height: 25px; padding: 5px; overflow: hidden; display: inline-block; width: 230px; height: 15px;">
+					<ul>
+						<li data-slide="pricealert_1"><div class="pricealert_thumb" ></div></li>
+						<li data-slide="pricealert_2"><div class="pricealert_thumb" ></div></li>
+						<li data-slide="pricealert_3"><div class="pricealert_thumb" ></div></li>
+						<li data-slide="pricealert_4"><div class="pricealert_thumb" ></div></li>
+						<li data-slide="pricealert_5"><div class="pricealert_thumb" ></div></li>
+					</ul>
+				</div>
+				<div class="slideNext" style="margin-right: 5px; float: right; display: inline-block; color: #666667; font-size: 12px;cursor: pointer;height: 15px;">Next</div>

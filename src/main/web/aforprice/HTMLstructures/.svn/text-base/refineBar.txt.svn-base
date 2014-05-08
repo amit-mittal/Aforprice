@@ -1,0 +1,52 @@
+<div id="refine_bar" class="bodbot">
+		<ul>
+			
+			<select name="AllRetailer">
+			<option value="">All Retailer</option>
+			<option value="M">amazon</option>
+			<option value="F">bjs</option>
+			<option value="M">bestbuy</option>
+			<option value="F"></option>
+			</select>
+			
+			<select name="AllBrand">
+			<option value="">All Brand</option>
+			<option value="M">Sony</option>
+			<option value="F">Apple</option>
+			<option value="M">Philips</option>
+			<option value="F"></option>
+			</select>
+			<select name="AnyPrice">
+			<option value="">Any Price</option>
+			<option value="M">$10-$15</option>
+			<option value="F">$15-$20</option>
+			<option value="M">$20-$25</option>
+			<option value="F">$25-$30</option>
+			</select>
+			<select name="AnyRating">
+			<option value="">Any Rating</option>
+			<option value="M">1-2</option>
+			<option value="F">2-3</option>
+			<option value="M">3-4</option>
+			<option value="F">4-5</option>
+			</select>
+			
+			
+			<select name="AllColor">
+			<option value="">All Color</option>
+			<option value="M">Black</option>
+			<option value="F">White</option>
+			<option value="M">Blue</option>
+			<option value="F"></option>
+			</select>
+			
+			<select name="AllType">
+			<option value="">All Type</option>
+			<option value="M"></option>
+			<option value="F"></option>
+			<option value="M"></option>
+			<option value="F"></option>
+			</select>
+		
+		</ul>
+	</div>

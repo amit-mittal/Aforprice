@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+/* slideshow CSS */
+.slide_selected {
+	position: relative;
+	overflow: hidden;
+}
+.slide_selected .slide {
+	display: none;
+}
+.slide .product_image {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.75;
+	background: url('../product_image.png');
+	background-size: 100%;
+}
+.slide .product_image .arrow {
+	-webkit-transition: -webkit-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
+	-o-transition: -o-transform 0.5s;
+	transition: transform 0.5s;
+}
+.slide .product_image .arrow.down {
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+.slide .product_graph {
+	background: url('../product_graph.png');
+	background-size: 100%;
+}
+.slide_thumbnail ul{
+	position: relative;
+	width: 10000px;
+}
+.slide_thumbnail ul li {
+	display: inline;
+	margin: 10px;
+	cursor: pointer;
+}
+.slide_thumbnail ul li img{
+	border: 1px solid transparent;
+	box-shadow: 0px 0px 5px #666667;
+}
+.slide_thumbnail ul li:HOVER img{
+	border: 1px solid black;
+}
+.slide_thumbnail ul li.selected img{
+	border: 1px solid black;
+}
+
+/* main slideshow */
+#main_graph {
+	display: inline-block;
+}
+#slideshow .slide_selected div.slide{
+	display: inline-block;
+}

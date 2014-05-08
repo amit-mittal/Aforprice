@@ -1,0 +1,40 @@
+10
+
+dir
+2167
+svn://73.33.4.220:1441/alpha/trunk/crawler/src/main/java/thrift/genereated
+svn://73.33.4.220:1441/alpha
+
+
+
+2014-05-04T22:16:53.885415Z
+2156
+ashish
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b857e4fd-1b5e-4221-959f-fbdceda52d47
+
+config
+dir
+
+pricealert
+dir
+
+retailer
+dir
+
+user
+dir
+
